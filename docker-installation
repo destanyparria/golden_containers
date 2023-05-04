@@ -1,0 +1,11 @@
+mkdir dockerenv
+cd  dockerenv
+sudo yum update -y
+sudo yum install -y docker
+sudo usermod -a -G docker ec2-user
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
+sudo systemctl status docker.service
+sudo systemctl is-active docker
+docker version
+docker info
